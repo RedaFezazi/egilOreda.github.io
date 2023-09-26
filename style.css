@@ -9,11 +9,19 @@ body {
   margin: 0 auto;
 }
 
+/* Header: Not sure if we should keep 100 viewport height eller byta till px */
+/* The over flow is just to hide the exces of the image*/
+/* Color to be changer accordinely */
+
 header {
   height: 100vh;
   background-color: firebrick;
+  overflow: hidden;
 }
 
+/* Not sure about using id instead of class */
+/* the height is double the veiwport so that each half part of the  */
+/* FlexBox has been used to centrelize the three parts inside this section */
 #service {
   height: 200vh;
   background-color: aqua;
@@ -23,24 +31,36 @@ header {
   align-items: center;
 }
 
+/* This is the container of three types of clients (3 articles) */
 #clients {
-  background-color: blue;
   display: flex;
   justify-content: space-between;
   width: 82%;
 }
 
+/* Not sure about the height if it should be px or depending on the viewport */
 #clients article {
   height: 308px;
   width: 256px;
-  background-color: rgb(214, 0, 0);
+  background-color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
+  border-radius: 5px;
+
+  /* This part has been directly copied from Figma */
+  font-family: Fira Sans;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 18px;
+  letter-spacing: 0em;
+  text-align: center;
 }
 
 /* The figure elements  */
-
+/* Flex box is been used to centralize the picture inside the figure (margin did not work) */
+/* Overflow is been used to hide the excess of the img outside of the figure element*/
+/* Margin has a negative value to pull the figure outside of the article element */
 #clients article figure {
   height: 150px;
   width: 90%;
@@ -49,6 +69,7 @@ header {
   justify-content: center;
   overflow: hidden;
   margin-top: -20px;
+  border-radius: 5px;
 }
 
 /* Because the images have different sizes each one of them has its own height and top margin */
@@ -65,4 +86,19 @@ header {
 #clients article:nth-of-type(3) img {
   height: 250%;
   margin-top: 20px;
+}
+
+#clients article p {
+  padding: 1rem;
+  color: rgba(0, 0, 0, 40%);
+}
+
+#clients article h3 {
+  margin-top: 1rem;
+  /* This part has been directly copied from Figma */
+  font-family: Frank Ruhl Libre;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: 0em;
 }

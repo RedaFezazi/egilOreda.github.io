@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 * {
   padding: 0;
   margin: 0;
@@ -67,3 +68,64 @@ header {
   height: 250%;
   margin-top: 20px;
 }
+=======
+body {
+    width: 80%;
+    margin: auto;
+    background-color: #ebebeb;
+    /* a simple border to keep track of the body, delete when finished */
+    border: solid 2px black;
+}
+
+/* background .class for all the elements with blue background */
+.babyblue {
+    background-color: #c7ddea;
+}
+
+/* background .class for all the elements with red background */
+.red {
+    background-color: #f17949;
+}
+
+/* background .class for all the elements with yellow background */
+.yellow {
+    background-color: #ffb939;
+}
+
+/* background .class for all the elements with white background */
+.white {
+    background-color: white;
+}
+
+/* background .class for all the elements with lightgrey background */
+.lightgrey {
+    background-color: #ebebeb;
+}
+
+/* background .class for all the elements with middlegrey background */
+.middlegrey {
+    background-color: #a9a19e;
+}
+
+/* background .class for all the elements with darkgrey background */
+.darkgrey {
+    background-color: #777574;
+}
+
+/* background .class for the elements with gradient grey/yellow background */
+.splitgradientback {
+    background: linear-gradient(
+        to top,
+        #ffb939 0%,
+        #ffb939 47.3%,
+        #a9a19e 47.3%,
+        #a9a19e 100%
+    )
+}
+
+/* !!TEMPORARY!! JUST TO FIT THE IMAGES INTO THE BODY FOR NOW, DELETE IN THE FUTURE */
+img {
+    width: 100%;
+    height: auto;
+}
+>>>>>>> 4a7f05a61c05489e16e1391a28a61ee3dcf63e90

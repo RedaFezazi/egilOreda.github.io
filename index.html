@@ -5,46 +5,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Insurance Grid</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@700&display=swap" rel="stylesheet">
   </head>
   <body>
     <!-- Header, contains three articles and a nav bar. This will be styles as a grid with a separate NAV-bar underneath.  -->
     <header>
       <!-- This is the wrapper for the upper section of teh header, This will be styled as a grid -->
-      <div>
+      <div class="headertop">
         <!-- First article, a short description of the service and a button to join -->
         <article class="babyblue">
-          <h1>
-            We've got you <br />
-            Covered.
-          </h1>
-          <p>
-            Together we keep each other safe at home aor at work. By paying a
-            tiny fee a day, you are fullly insured all day long. You gety it all
-            for as little as <span>$0.4 per day</span>
-          </p>
-          <button>JOIN NOW</button>
-          <figure>
+          <div class="headertoptext">
+            <h1>
+              We've got you <br />
+              Covered.
+            </h1>
+            <p>
+              Together we keep each other safe at home aor at work. By paying a
+              tiny fee a day, you are fullly insured all day long. You gety it all
+              for as little as <span>$0.4 per day</span>
+            </p>
+            <button class="joinbutton">JOIN NOW</button>
+          </div>
+          <figure class="familyimg">
             <img src="img/family.png" alt="family" />
           </figure>
         </article>
         <!-- A button with a link, and the borders and background should be transparent -->
         <article class="red">
           <!-- short question -->
-          <p>What do we have to offer?</p>
+          <p class="headerquestiontext">What do we have to offer?</p>
           <!-- solution with link -->
-          <button>Learn more</button>
+          <button class="headerborderlessbutton">Learn more</button>
         </article>
         <!-- A button with a link, and the borders and background should be transparent -->
         <article class="yellow">
           <!-- short question -->
-          <p>What are you waiting for?</p>
+          <p class="headerquestiontext">What are you waiting for?</p>
           <!-- solution with link -->
-          <button>Join today</button>
+          <button class="headerborderlessbutton">Join today</button>
         </article>
       </div>
       <!-- A simple nav bar, use flexbox. HOME should be black and the others grey. -->
       <!-- If we have time, use a hover effect on the text. To turn it black -->
-      <nav>
+      <nav class="headernav">
         <a href="">Home</a>
         <a href="">Our offer</a>
         <a href="">Why us</a>
@@ -55,11 +63,6 @@
     <main>
       <!-- This section contains a headline, a button and a short description followed by three articles with pictures, healines and text. On the bottom is a healine and a longer description. this should be styled with flexbox and a gradient background that switches color. -->
       <!-- style with grid -->
-      <div>
-        <h1></h1>
-        <p></p>
-        <button></button>
-      </div>
 
       <section id="service" class="splitgradientback">
         <!-- style with grid -->
@@ -73,16 +76,16 @@
             voluptate adipisci totam soluta dolores officiis iste! Qui
             dignissimos odio delectus error cumque, est sit earum expedita.
           </p>
-          <button>JOIN NOW</button>
+          <button class="joinbutton">JOIN NOW</button>
         </div>
 
         <!-- style with grid -->
         <div id="clients">
           <!-- still undecided wether to use grid or flex -->
           <article>
-            <figure>
+            <figure class="babyblue">
               <img
-                src="/egilOreda.github.io/img/child.png"
+                src="img/child.png"
                 alt="image of a kid"
               />
             </figure>
@@ -96,9 +99,9 @@
           </article>
           <!-- still undecided wether to use grid or flex -->
           <article>
-            <figure>
+            <figure class="yellow">
               <img
-                src="/egilOreda.github.io/img/adult.png"
+                src="img/adult.png"
                 alt="image of an adult"
               />
             </figure>
@@ -112,9 +115,9 @@
           </article>
           <!-- still undecided wether to use grid or flex -->
           <article>
-            <figure>
+            <figure class="red">
               <img
-                src="/egilOreda.github.io/img/old.png"
+                src="img/old.png"
                 alt="image of an old person"
               />
             </figure>

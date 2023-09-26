@@ -1,4 +1,4 @@
-* {
+ * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -7,6 +7,7 @@
 body {
   width: 1000px;
   margin: 0 auto;
+  background-color: #ebebeb;
 }
 
 /* Header: Not sure if we should keep 100 viewport height eller byta till px */
@@ -14,9 +15,7 @@ body {
 /* Color to be changer accordinely */
 
 header {
-  height: 100vh;
-  background-color: firebrick;
-  overflow: hidden;
+  height: 600px;
 }
 
 /* Not sure about using id instead of class */
@@ -49,6 +48,7 @@ header {
   /* the font is not working */
 
   font-family: Fira Sans;
+  color: rgba(0, 0, 0, 0.6);
   font-size: 14px;
   font-weight: 500;
   line-height: 24px;
@@ -66,7 +66,8 @@ header {
   margin: 3rem 3rem 0 1rem;
 }
 
-#safety button {
+/* Changed to a class to use the same CSS for the headerbutton */
+.joinbutton {
   width: 131px;
   height: 39px;
   border-radius: 100px;
@@ -77,6 +78,7 @@ header {
   margin-left: 1rem;
 
   font-family: Fira Sans;
+  color: rgba(0, 0, 0, 0.6);
   font-size: 10px;
   font-weight: 700;
   line-height: 12px;
@@ -102,7 +104,7 @@ header {
   border-radius: 5px;
 
   /* This part has been directly copied from Figma */
-  /* the font is not working */
+  /* Fixed the font */
   font-family: Fira Sans;
   font-size: 11px;
   font-weight: 700;
@@ -118,7 +120,6 @@ header {
 #clients article figure {
   height: 150px;
   width: 90%;
-  background-color: aliceblue;
   display: flex;
   justify-content: center;
   overflow: hidden;
@@ -156,3 +157,180 @@ header {
   line-height: 20px;
   letter-spacing: 0em;
 }
+
+
+/* background .class for all the elements with blue background */
+.babyblue {
+    background-color: #c7ddea;
+}
+
+/* background .class for all the elements with red background */
+.red {
+    background-color: #f17949;
+}
+
+/* background .class for all the elements with yellow background */
+.yellow {
+    background-color: #ffb939;
+}
+
+/* background .class for all the elements with white background */
+.white {
+    background-color: white;
+}
+
+/* background .class for all the elements with lightgrey background */
+.lightgrey {
+    background-color: #ebebeb;
+}
+
+/* background .class for all the elements with middlegrey background */
+.middlegrey {
+    background-color: #a9a19e;
+}
+
+/* background .class for all the elements with darkgrey background */
+.darkgrey {
+    background-color: #777574;
+}
+
+/* background .class for the elements with gradient grey/yellow background */
+.splitgradientback {
+    background: linear-gradient(
+        to top,
+        #ffb939 0%,
+        #ffb939 47.3%,
+        #a9a19e 47.3%,
+        #a9a19e 100%
+    )}
+
+/* Size of the family img in header */
+.familyimg img:first-child {
+    width: 286px;
+    height: auto;
+}
+
+/* styles for all the p-elements in header */
+header p {
+    font-family: fira sans;
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+/* Display CSS for the upper part of the header */
+.headertop {
+    display: grid;
+    grid-template-columns: 501px  501px;
+    grid-template-rows: 272px 272px;
+}
+
+/* Grid placement for the elements inside .headertop, also the flex inside those elements */
+.headertop article:nth-child(1) {
+    grid-column: 1 / 1;
+    grid-row: 1 / 3;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Grid placement for the elements inside .headertop, also the flex inside those elements */
+.headertop article:nth-child(2) {
+    grid-column: 2 / 2;
+    grid-row: 1 / 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/* Grid placement for the elements inside .headertop, also the flex inside those elements */
+.headertop article:nth-child(3) {
+    grid-column: 2 / 2;
+    grid-row: 2 / 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/* how the text and button elements inside the first block of header should be */
+.headertoptext {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 60px 140px 0 100px;
+}
+
+.headertoptext button {
+    margin-top: 30px;
+    margin-left: 0;
+}
+
+/* removing the borders of the right buttons in the header */
+.headerborderlessbutton {
+    font-family: Frank Ruhl Libre;
+    font-size: 32px;
+    background-color: transparent;
+    font-stretch: ultra-expanded;
+    border: none;
+    color: white;
+}
+
+/*  text size adjustment */
+.headerquestiontext {
+    font-size: 11 px;
+}
+
+/* placing the family-img so it sits flush on the bottom of the box */
+.familyimg {
+    align-self: flex-end;
+    justify-self: flex-end;
+    margin-top: -105px;
+}
+
+/* style for the small nav at the bottom on the header */
+.headernav {
+    height: 56px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 150px 0 150px;
+    font-size: 12px;
+}
+
+/* styling the first option black and the rest grey */
+.headernav a {
+    color: grey;
+    text-decoration: none;
+}
+
+.headernav a:first-child {
+    color: black;
+}
+
+/* lets the price inside the blue header box be a different color */
+span {
+    color: white;
+}
+
+a {
+    font-family: fira sans;
+}
+
+/* Styling of the header inside the first box of the header */
+header h1 {
+    font-family: Frank Ruhl Libre;
+    font-stretch: expanded;
+    font-size: 44px;
+    font-weight: 900;
+    line-height: 45px;
+    letter-spacing: -0.02em;
+    text-align: left;
+}
+
+

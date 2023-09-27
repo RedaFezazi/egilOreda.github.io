@@ -5,16 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Insurance Grid</title>
     <link rel="stylesheet" href="style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <!-- Header, contains three articles and a nav bar. This will be styles as a grid with a separate NAV-bar underneath.  -->
-    <header>
+    <header id="top">
       <!-- This is the wrapper for the upper section of teh header, This will be styled as a grid -->
       <div class="headertop">
         <!-- First article, a short description of the service and a button to join -->
@@ -26,8 +32,8 @@
             </h1>
             <p>
               Together we keep each other safe at home aor at work. By paying a
-              tiny fee a day, you are fullly insured all day long. You gety it all
-              for as little as <span>$0.4 per day</span>
+              tiny fee a day, you are fullly insured all day long. You gety it
+              all for as little as <span>$0.4 per day</span>
             </p>
             <button class="joinbutton">JOIN NOW</button>
           </div>
@@ -84,10 +90,7 @@
           <!-- still undecided wether to use grid or flex -->
           <article>
             <figure class="babyblue">
-              <img
-                src="img/child.png"
-                alt="image of a kid"
-              />
+              <img src="img/child.png" alt="image of a kid" />
             </figure>
             <h3>Children</h3>
             <p>
@@ -100,10 +103,7 @@
           <!-- still undecided wether to use grid or flex -->
           <article>
             <figure class="yellow">
-              <img
-                src="img/adult.png"
-                alt="image of an adult"
-              />
+              <img src="img/adult.png" alt="image of an adult" />
             </figure>
             <h3>Just right</h3>
             <p>
@@ -116,10 +116,7 @@
           <!-- still undecided wether to use grid or flex -->
           <article>
             <figure class="red">
-              <img
-                src="img/old.png"
-                alt="image of an old person"
-              />
+              <img src="img/old.png" alt="image of an old person" />
             </figure>
             <h3>Old fart</h3>
             <p>
@@ -132,9 +129,7 @@
         </div>
 
         <!-- just keep style as block -->
-        <div>
-          <h2></h2>
-          <p><br /><br /></p>
+        <div id="aboutUs">
           <h2>About us</h2>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
@@ -155,14 +150,14 @@
       </section>
 
       <!-- This section contains six smaller articles, the first article includes a question. The others contain intructions on how to sign up for insurance. Style with grid, three colums, two rows -->
-      <section>
+      <section id="howItWorks">
         <article class="babyblue">
           <h2>How<br />It works?</h2>
         </article>
 
         <article class="white">
           <h3>01</h3>
-          <p>Answer a few questions about yourself</p>
+          <p>Answer a few questions<br />about yourself</p>
         </article>
 
         <article class="lightgrey">
@@ -172,7 +167,7 @@
 
         <article class="white">
           <h3>03</h3>
-          <p>Answer some questions about your medical history.</p>
+          <p>Answer some questions about<br />your medical history.</p>
         </article>
 
         <article class="red">
@@ -187,12 +182,14 @@
       </section>
 
       <!-- This section is a small bar with a return button and a healine, it should return you to the top, style with flexbox -->
-      <section class="middlegrey">
+      <!-- To discuss: I made the section into an anchor that can take the user to the top of page by clicking on the element. Also id="#top" has been added to the header elemnt-->
+
+      <a href="#top" id="takeMe" class="middlegrey">
         <figure>
           <img src="img/chevrons-up.svg" alt="chevrons-up" />
         </figure>
         <h4>Take me up again!</h4>
-      </section>
+      </a>
     </main>
 
     <!--  The footer is an empty box with height and background-color. -->

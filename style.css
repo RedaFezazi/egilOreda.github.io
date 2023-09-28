@@ -2,31 +2,189 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: fira sans;
 }
 
 body {
-  width: 1000px;
+  max-width: 1000px;
   margin: 0 auto;
   background-color: #ebebeb;
 }
 
-/* Header: Not sure if we should keep 100 viewport height eller byta till px */
 /* The over flow is just to hide the exces of the image*/
-/* Color to be changer accordinely */
-
 header {
-  height: 600px;
+  height: 37.5rem;
+}
+
+footer {
+  height: 21.25rem;
 }
 
 p {
   font-weight: 500;
 }
 
+/* background .class for all the elements with colored background */
+.babyblue {
+  background-color: #c7ddea;
+}
+.red {
+  background-color: #f17949;
+}
+.yellow {
+  background-color: #ffb939;
+}
+.white {
+  background-color: white;
+}
+.lightgrey {
+  background-color: #ebebeb;
+}
+.middlegrey {
+  background-color: #a9a19e;
+}
+.darkgrey {
+  background-color: #777574;
+}
+
+/* background .class for the elements with gradient grey/yellow background */
+.splitgradientback {
+  background: linear-gradient(
+    to top,
+    #ffb939 0%,
+    #ffb939 52.7%,
+    #a9a19e 52.7%,
+    #a9a19e 100%
+  );
+}
+
+/* Display CSS for the upper part of the header */
+.headertop {
+  display: grid;
+  grid-template-columns: 31.313rem 31.313rem;
+  grid-template-rows: 17rem 17rem;
+}
+
+/* Grid placement for the elements inside .headertop, also the flex inside those elements */
+.headertop article:nth-child(1) {
+  grid-column: 1 / 1;
+  grid-row: 1 / 3;
+  display: flex;
+  flex-direction: column;
+}
+.headertop article:nth-child(2) {
+  grid-column: 2 / 2;
+  grid-row: 1 / 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.headertop article:nth-child(3) {
+  grid-column: 2 / 2;
+  grid-row: 2 / 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/* styles for all the p-elements in header */
+header p {
+  color: rgba(0, 0, 0, 0.6);
+  line-height: 1.5rem;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+/* Styling of the header inside the first box of the header */
+header h1 {
+  font-family: Frank Ruhl Libre;
+  font-stretch: expanded;
+  font-size: 2.75rem;
+  font-weight: 900;
+  line-height: 2.813rem;
+  letter-spacing: -0.02em;
+  text-align: left;
+}
+
+/* lets the price inside the blue header box be a different color */
+span {
+  color: white;
+}
+
+/* placing the family-img so it sits flush on the bottom of the box */
+.familyimg {
+  align-self: flex-end;
+  justify-self: flex-end;
+  margin-top: -6.563rem;
+}
+
+/* Size of the family img in header */
+.familyimg img:first-child {
+  width: 17.875rem;
+  height: auto;
+}
+
+/* how the text and button elements inside the first block of header should be */
+.headertoptext {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1.875rem;
+  padding: 3.75rem 8.75rem 0 6.25rem;
+}
+
+.headertoptext p {
+  font-size: 14px;
+}
+
+.headertoptext button {
+  margin-top: 1.875rem;
+  margin-left: 0;
+}
+
+/* removing the borders of the right buttons in the header */
+.headerborderlessbutton {
+  font-family: Frank Ruhl Libre;
+  font-weight: 900;
+  font-size: 32px;
+  background-color: transparent;
+  border: none;
+  color: white;
+}
+
+/*  text size adjustment */
+.headerquestiontext {
+  font-size: 11px;
+}
+
+/* style for the small nav at the bottom on the header */
+.headernav {
+  height: 3.5rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0 9.375rem 0 9.375rem;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+/* styling the first option black and the rest grey */
+.headernav a {
+  color: #808080;
+  text-decoration: none;
+}
+.headernav a:first-child {
+  color: black;
+}
+
 /* Not sure about using id instead of class */
 /* the height is double the veiwport so that each half part of the  */
 /* FlexBox has been used to centrelize the three parts inside this section */
 #service {
-  height: 1292px;
+  height: 80.75rem;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -48,13 +206,9 @@ p {
   grid-column: 2 /3;
   grid-row: 1/3;
   margin: 3rem 3rem;
-
-  /* the font is not working */
-
-  font-family: Fira Sans;
   color: rgba(0, 0, 0, 0.6);
   font-size: 14px;
-  line-height: 24px;
+  line-height: 1.5rem;
   letter-spacing: 0em;
   text-align: left;
 }
@@ -72,16 +226,12 @@ p {
 
 /* Changed to a class to use the same CSS for the headerbutton */
 .joinbutton {
-  width: 131px;
-  height: 39px;
-  border-radius: 100px;
+  width: 8.188rem;
+  height: 2.438rem;
+  border-radius: 6.25rem;
   border: none;
-  box-shadow: 0px 4px 17px -6px rgba(0, 0, 0, 0.67);
-  -webkit-box-shadow: 0px 4px 17px -6px rgba(0, 0, 0, 0.67);
-  -moz-box-shadow: 0px 4px 17px -6px rgba(0, 0, 0, 0.67);
   margin-left: 1rem;
 
-  font-family: Fira Sans;
   color: rgba(0, 0, 0, 0.6);
   font-size: 10px;
   font-weight: 700;
@@ -99,17 +249,13 @@ p {
 
 /* Not sure about the height if it should be px or depending on the viewport */
 #clients article {
-  height: 308px;
-  width: 256px;
+  height: 19.25rem;
+  width: 16rem;
   background-color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
-  border-radius: 5px;
-
-  /* This part has been directly copied from Figma */
-  /* Fixed the font */
-  font-family: Fira Sans;
+  border-radius: 0.313rem;
   font-size: 11px;
   font-weight: 700;
   line-height: 18px;
@@ -122,39 +268,38 @@ p {
 /* Overflow is been used to hide the excess of the img outside of the figure element*/
 /* Margin has a negative value to pull the figure outside of the article element */
 #clients article figure {
-  height: 150px;
+  height: 9.375rem;
   width: 90%;
   display: flex;
   justify-content: center;
   overflow: hidden;
-  margin-top: -20px;
-  border-radius: 5px;
+  margin-top: -1.25rem;
+  border-radius: 0.313rem;
 }
 
 /* Because the images have different sizes each one of them has its own height and top margin */
 #clients article:first-of-type img {
   height: 100%;
-  margin-top: 25px;
+  margin-top: 1.563rem;
 }
 
 #clients article:nth-of-type(2) img {
   height: 280%;
-  margin-top: 10px;
+  margin-top: 0.625rem;
 }
 
 #clients article:nth-of-type(3) img {
   height: 250%;
-  margin-top: 20px;
+  margin-top: 1.25rem;
 }
 
 #clients article p {
   padding: 1rem;
-  color: rgba(0, 0, 0, 40%);
+  color: rgba(0, 0, 0, 0.4);
 }
 
 #clients article h3 {
   margin-top: 1rem;
-  /* This part has been directly copied from Figma */
   font-family: Frank Ruhl Libre;
   font-size: 16px;
   font-weight: 700;
@@ -170,219 +315,36 @@ p {
   line-height: 45px;
   letter-spacing: -0.02em;
   text-align: center;
-
-  width: 314px;
-  height: 101px;
-
+  width: 19.625rem;
+  height: 6.313rem;
   margin: 0 auto;
 }
 
 #aboutUs p {
-  font-family: Fira Sans;
   font-size: 14px;
   line-height: 20px;
   letter-spacing: 0em;
   text-align: center;
-
   color: #00000099;
-  width: 442px;
-  height: 280px;
-}
-
-/* background .class for all the elements with blue background */
-.babyblue {
-  background-color: #c7ddea;
-}
-
-/* background .class for all the elements with red background */
-.red {
-  background-color: #f17949;
-}
-
-/* background .class for all the elements with yellow background */
-.yellow {
-  background-color: #ffb939;
-}
-
-/* background .class for all the elements with white background */
-.white {
-  background-color: white;
-}
-
-/* background .class for all the elements with lightgrey background */
-.lightgrey {
-  background-color: #ebebeb;
-}
-
-/* background .class for all the elements with middlegrey background */
-.middlegrey {
-  background-color: #a9a19e;
-}
-
-/* background .class for all the elements with darkgrey background */
-.darkgrey {
-  background-color: #777574;
-}
-
-/* background .class for the elements with gradient grey/yellow background */
-/* I changed the percentage from 45.3 to 52.7 because it's the grey area that has the smaller size */
-.splitgradientback {
-  background: linear-gradient(
-    to top,
-    #ffb939 0%,
-    #ffb939 52.7%,
-    #a9a19e 52.7%,
-    #a9a19e 100%
-  );
-}
-
-/* Size of the family img in header */
-.familyimg img:first-child {
-  width: 286px;
-  height: auto;
-}
-
-/* styles for all the p-elements in header */
-header p {
-  font-family: fira sans;
-  color: rgba(0, 0, 0, 0.6);
-  line-height: 24px;
-  letter-spacing: 0em;
-  text-align: left;
-}
-
-/* Display CSS for the upper part of the header */
-.headertop {
-  display: grid;
-  grid-template-columns: 501px 501px;
-  grid-template-rows: 272px 272px;
-}
-
-/* Grid placement for the elements inside .headertop, also the flex inside those elements */
-.headertop article:nth-child(1) {
-  grid-column: 1 / 1;
-  grid-row: 1 / 3;
-  display: flex;
-  flex-direction: column;
-}
-
-/* Grid placement for the elements inside .headertop, also the flex inside those elements */
-.headertop article:nth-child(2) {
-  grid-column: 2 / 2;
-  grid-row: 1 / 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-
-/* Grid placement for the elements inside .headertop, also the flex inside those elements */
-.headertop article:nth-child(3) {
-  grid-column: 2 / 2;
-  grid-row: 2 / 2;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-
-/* how the text and button elements inside the first block of header should be */
-.headertoptext {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  gap: 30px;
-  padding: 60px 140px 0 100px;
-}
-
-.headertoptext p {
-  font-size: 14px;
-}
-
-.headertoptext button {
-  margin-top: 30px;
-  margin-left: 0;
-}
-
-/* removing the borders of the right buttons in the header */
-.headerborderlessbutton {
-  font-family: Frank Ruhl Libre;
-  font-weight: 900;
-  font-size: 32px;
-  background-color: transparent;
-  border: none;
-  color: white;
-}
-
-/*  text size adjustment */
-.headerquestiontext {
-  font-size: 11px;
-}
-
-/* placing the family-img so it sits flush on the bottom of the box */
-.familyimg {
-  align-self: flex-end;
-  justify-self: flex-end;
-  margin-top: -105px;
-}
-
-/* style for the small nav at the bottom on the header */
-.headernav {
-  height: 56px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-around;
-  padding: 0 150px 0 150px;
-  font-size: 12px;
-}
-
-/* styling the first option black and the rest grey */
-.headernav a {
-  color: grey;
-  text-decoration: none;
-}
-
-.headernav a:first-child {
-  color: black;
-}
-
-/* lets the price inside the blue header box be a different color */
-span {
-  color: white;
-}
-
-a {
-  font-family: fira sans;
-}
-
-/* Styling of the header inside the first box of the header */
-header h1 {
-  font-family: Frank Ruhl Libre;
-  font-stretch: expanded;
-  font-size: 44px;
-  font-weight: 900;
-  line-height: 45px;
-  letter-spacing: -0.02em;
-  text-align: left;
+  width: 27.625rem;
+  height: 17.5rem;
 }
 
 #howItWorks {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 340px 340px;
+  grid-template-rows: 21.25rem 21.25rem;
 }
 
 #howItWorks h3 {
   font-family: Frank Ruhl Libre;
   font-size: 35px;
-
   font-weight: 900;
   line-height: 35px;
   letter-spacing: -0.02em;
   text-align: left;
   color: rgba(0, 0, 0, 0.4);
-  padding: 37.5px;
+  padding: 2.344rem;
 }
 
 #howItWorks h2 {
@@ -392,17 +354,16 @@ header h1 {
   line-height: 45px;
   letter-spacing: -0.02em;
   text-align: center;
-  margin-top: 125px;
+  margin-top: 7.813rem;
 }
 
 #howItWorks p {
-  font-family: Fira Sans;
   font-size: 17px;
   line-height: 20px;
   letter-spacing: 0em;
   text-align: center;
   color: rgba(0, 0, 0, 0.7);
-  margin-top: 48px;
+  margin-top: 3rem;
 }
 
 #takeMe {
@@ -410,27 +371,48 @@ header h1 {
   align-items: center;
   justify-content: space-between;
   flex-direction: column;
-  height: 68px;
+  height: 4.25rem;
   width: 100%;
   border: none;
   text-decoration: none;
 }
 
 #takeMe h4 {
-  font-family: Fira Sans;
   font-size: 17px;
   font-weight: 500;
   line-height: 20px;
   letter-spacing: 0em;
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
   color: rgba(0, 0, 0, 0.7);
 }
 
 #takeMe figure {
-  margin-top: 12px;
+  margin-top: 0.75rem;
 }
 
-footer {
-  height: 340px;
+/* Animationer - överkurs 
+.headerborderlessbutton:hover {
+  font-size: 33px;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.67);
 }
+
+.headernav a:hover {
+  color: black;
+}
+
+.joinbutton:hover {
+  font-size: 11px;
+  box-shadow: 0px 4px 17px -6px rgba(0, 0, 0, 0.67);
+  -webkit-box-shadow: 0px 4px 17px -6px rgba(0, 0, 0, 0.67);
+  -moz-box-shadow: 0px 4px 17px -6px rgba(0, 0, 0, 0.67);
+}
+
+#takeMe h4:hover {
+  font-size: 18px;
+}
+
+#howItWorks p:hover {
+  font-size: 18px;
+}
+*/
